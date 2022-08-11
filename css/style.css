@@ -1,0 +1,68 @@
+.BODY {
+    width: max-content;
+    height: max-content;
+
+    position: relative;
+}
+.img1 {
+    height: 100%;
+    width: 100%; 
+
+}
+/* .rocket {
+    width: 100%;
+    transform: rotate(135deg);
+    width: 80px;
+    height: 100px;
+    animation: flight 5s infinite ; */
+
+.rocket{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 80px;
+    height: 100px;
+    animation: flight 15s infinite alternate ease-out;
+    rotate: 135(deg);
+}
+.comet {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 100px;
+    top: 20px;
+    animation: flight2  15s infinite alternate ease-in ;
+}
+.moon {
+    position: absolute;
+    width: 70px;
+    height: 75px;
+    animation: hovering 20s alternate infinite ease-in-out;
+}
+.bird {
+    position: absolute; 
+    width: 20px;
+    height: 20px;
+    left: 400px;
+    top: 600px;
+    animation: flight3 15s infinite alternate ease-out;
+}
+
+
+@keyframes flight {
+    from {top: 0px;left: 0px; transform: rotate(135deg);}
+    to {top: 400px; left: 500px; transform: rotate(360deg);}
+}
+@keyframes flight2 {
+    from {top: 20px; left: 100px; transform: rotate(-15deg); }
+    to {top: 0px; left: 1920px; transform: rotate(-135deg);}
+
+}
+@keyframes hovering {
+    from { right: 130px; top: 120px; transform: rotate(0deg) scale(1);}
+    to { right: 130px; top: 130px; transform: rotate(360deg) scale(2); }
+}
+@keyframes flight3 {
+    from {left: 400px;top: 600px; transform: scale(3); }
+    to {left: 1200px;top: 200px; transform: scale(1); }
+}
